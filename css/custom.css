@@ -1,0 +1,242 @@
+/* Base Styles */
+
+body{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #CEA434 !important;
+    
+}
+
+hr{
+    width: 100px;
+    height: 3px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#about, 
+#portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   
+}
+
+
+
+/*///// Nav + jumbotron///// */
+
+.bg-dark  {
+    background-color: #0E1F33 !important;
+}
+
+.jumbotron{
+    background:  url('../img/1.jpg');
+    background-size: cover; 
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.banner-text{
+    height: 200px;
+    z-index: 1;
+    color: #CEA434;
+}
+
+.lead {
+    font-size: 1.5em;
+}
+
+.color-overlay { 
+    background:#0E1F33;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-text, 
+.color-overlay {
+    position: absolute;
+}
+
+    .container span.cursor {
+        
+        background-color: #CEA434;
+        margin-left: 0.1rem;
+        width: 3px;
+        animation: blink 1s infinite;
+      }
+
+    .container p span.cursor.typing {
+        animation: none;
+    }
+      @keyframes blink {
+        0%  { background-color: #CEA434; }
+        49% { background-color: #CEA434; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+        100%  { background-color: #CEA434; }
+      }
+    
+
+
+
+/*///// About me///// */
+
+.avatar img{
+    width: 80%; 
+    
+}
+
+#about{
+    background-color: #F1F1F3;
+    height: 700px;
+    
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    background: #193153;
+    color: #CEA434;
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgb(25,49,83,.8);
+}
+
+
+/*///// Portfolio///// */
+
+#portfolio{
+    background-color: #193153;
+    color: #CEA434;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* .row{
+    display: flex; 
+    justify-content: center;
+} */
+
+.project{
+    background: url('../img/portfolio/photo-gallery.png');
+    background-size: cover;
+    width: 304px; 
+    height: 228px;
+    text-decoration: none;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-item a{
+    display: inline-block;
+}
+
+.portfolio-item{
+    
+    width: 304px; 
+    height: 228px;
+    padding: 0;
+}
+
+.gallery {
+    background: url('../img/portfolio/photo-gallery.png');
+}
+
+.game {
+    background: url('../img/portfolio/guessing-game.png');
+}
+
+.dashboard{
+    background: url('../img/portfolio/dashboard.png');
+}
+
+.employee {
+    background: url('../img/portfolio/employee-directory.png');
+}
+
+.spa{
+    background: url('../img/portfolio/spa.png');
+}
+
+.project:hover .color-hover, 
+.project:hover .project-title{
+    visibility: visible;
+}
+
+.project-title{
+    z-index: 1;
+    color: #CEA434;  
+    visibility: hidden;
+}
+
+.color-hover{
+    background:#0E1F33;
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.project-title, 
+.color-hover {
+    position: absolute;
+}
+
+
+/*///// Footer///// */
+
+footer{
+    height: 100px;
+    background-color: #F1F1F3;
+}
+
+.social svg{
+    stroke: none;
+    width: 30px;
+}
+
+/*///// Media Queries///// */
+
+@media (min-width: 300px) { 
+    #portfolio {
+        height: 1500px;
+    }
+    
+}
+
+@media (min-width: 768px) { 
+    #portfolio {
+        height: 1200px;
+        
+        
+    }
+
+    .portfolio-item {
+        margin-right: 15px;
+    }
+
+
+}
+
+@media (min-width: 1200px) { 
+    #portfolio {
+        height: 800px;
+    }
+}
